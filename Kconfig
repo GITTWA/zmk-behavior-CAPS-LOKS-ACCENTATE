@@ -1,0 +1,7 @@
+DT_COMPAT_ZMK_BEHAVIOR_CAPS_ACC := zmk,behavior-caps-acc
+
+config ZMK_BEHAVIOR_CAPS_ACC
+    bool
+    default $(dt_compat_enabled,$(DT_COMPAT_ZMK_BEHAVIOR_CAPS_ACC))
+    depends on (!ZMK_SPLIT || ZMK_SPLIT_ROLE_CENTRAL)
+    select ZMK_HID_INDICATORS
