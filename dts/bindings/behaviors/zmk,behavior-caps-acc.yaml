@@ -1,0 +1,29 @@
+# Copyright (c) 2026 GITTWA
+# SPDX-License-Identifier: MIT
+
+description: Italian Caps Lock Accented Vowels Behavior
+
+compatible: "zmk,behavior-caps-acc"
+
+include: zero_param.yaml
+
+properties:
+  bindings:
+    type: phandle-array
+    required: true
+    description: Single binding for the base key (used when Caps Lock is OFF, or Caps Lock + Shift when alt-code-shifted is not set)
+  alt-code:
+    type: int
+    required: true
+    description: Numeric Windows Alt-code without leading zero (e.g. 200 for Alt+0200)
+  alt-code-shifted:
+    type: int
+    description: Optional numeric Windows Alt-code when Caps Lock + Shift are both active (e.g. 201 for Alt+0201)
+  tap-ms:
+    type: int
+    default: 10
+    description: Duration in ms for each numpad digit tap
+  wait-ms:
+    type: int
+    default: 10
+    description: Wait time in ms between steps of the Alt-code sequence
