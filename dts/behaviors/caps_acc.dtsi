@@ -1,0 +1,51 @@
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    behaviors {
+        /* è / é  |  Con Caps Lock: È  |  Con Caps Lock + Shift: É */
+        it_e: behavior_it_e {
+            compatible = "zmk,behavior-caps-acc";
+            #binding-cells = <0>;
+            display-name = "IT è/È/É";
+            bindings = <&kp LBKT>;
+            alt-code = <200>;
+            alt-code-shifted = <201>;
+        };
+
+        /* à / °  |  Con Caps Lock: À  |  Con Caps Lock + Shift: ° */
+        it_a: behavior_it_a {
+            compatible = "zmk,behavior-caps-acc";
+            #binding-cells = <0>;
+            display-name = "IT à/À/°";
+            bindings = <&kp SQT>;
+            alt-code = <192>;
+        };
+
+        /* ò / ç  |  Con Caps Lock: Ò  |  Con Caps Lock + Shift: ç */
+        it_o: behavior_it_o {
+            compatible = "zmk,behavior-caps-acc";
+            #binding-cells = <0>;
+            display-name = "IT ò/Ò/ç";
+            bindings = <&kp SEMI>;
+            alt-code = <210>;
+        };
+
+        /* ù / §  |  Con Caps Lock: Ù  |  Con Caps Lock + Shift: § */
+        it_u: behavior_it_u {
+            compatible = "zmk,behavior-caps-acc";
+            #binding-cells = <0>;
+            display-name = "IT ù/Ù/§";
+            bindings = <&kp BSLH>;
+            alt-code = <217>;
+        };
+
+        /* ì / ^  |  Con Caps Lock: Ì  |  Con Caps Lock + Shift: ^ */
+        it_i: behavior_it_i {
+            compatible = "zmk,behavior-caps-acc";
+            #binding-cells = <0>;
+            display-name = "IT ì/Ì/^";
+            bindings = <&kp EQUAL>;
+            alt-code = <204>;
+        };
+    };
+};
